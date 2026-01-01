@@ -1,0 +1,5 @@
+# 本文件是因为作者英语不好而写：
+dim 是维度dimension的缩写，用来表示“这个轴有多长”。
+mask 本意是面具，在代码里翻译成掩码我觉得更好，感觉上像是指代对原本的数据做的某种处理，和原数据具有一定的关系。
+Ntr = Number of training samples（训练样本数）
+Nva = Number of validation samples（验证样本数）
