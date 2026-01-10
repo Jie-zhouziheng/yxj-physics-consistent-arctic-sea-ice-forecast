@@ -61,29 +61,34 @@ def _find_icecon_var(ds: xr.Dataset) -> str:
 
 def load_sic_month(path: Path, *, dtype=np.float32) -> np.ndarray:
     """
-    Load one monthly SIC file as a (y, x) numpy array.
-
-    - Auto-detects sensor-specific SIC var name: '*_ICECON'
-    - Squeezes time dim (expects time=1)
-    - Returns float32 by default
-
-    Note: This function does NOT apply masking/normalization to avoid assumptions.
+    Load one monthly SIC file as (y,x).
+    Speed-up: if a precomputed .npy exists, load it directly.
     """
+    # 约定：npy 路径与 nc 的 ym 对应
+    # nc: data/raw/nsidc_sic/NSIDC0051_..._YYYYMM_...nc
+    # npy: data/processed/sic_npy/{hem}/{YYYYMM}.npy
+    ym = parse_ym_from_filename(path)
+    m = _MONTHLY_RE.match(path.name)
+    hem = m.group("hem") if m else "N"
+
+    npy_path = Path("data/processed/sic_npy") / hem / f"{ym}.npy"
+    if npy_path.exists():
+        arr = np.load(npy_path).astype(dtype, copy=False)
+        if arr.ndim != 2:
+            raise ValueError(f"Expected 2D (y,x) from npy, got shape={arr.shape}")
+        return arr
+
+    # fallback: original nc loading
     ds = xr.open_dataset(path)
     try:
         v = _find_icecon_var(ds)
         da = ds[v]
-
-        # Expect (time, y, x) with time=1; squeeze to (y, x)
         if "time" in da.dims:
             da = da.squeeze("time", drop=True)
-
         arr = da.values.astype(dtype, copy=False)
-
-        # Basic sanity check: (y, x) expected
         if arr.ndim != 2:
             raise ValueError(f"Expected 2D (y,x) after squeeze, got shape={arr.shape}")
-
         return arr
     finally:
         ds.close()
+

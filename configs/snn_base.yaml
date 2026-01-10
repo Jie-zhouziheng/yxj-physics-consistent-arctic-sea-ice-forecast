@@ -1,0 +1,8 @@
+# configs/snn_base.yaml
+inherits: base.yaml
+
+model:
+  name: snn_base
+  hidden_channels: 16
+  kernel_size: 3
+  out_steps: 6
