@@ -1,0 +1,10 @@
+# configs/predrnn_base.yaml
+inherits: base.yaml
+
+model:
+  name: predrnn_base
+  out_steps: 6
+  hidden_channels: 32
+  num_layers: 2
+  kernel_size: 3
+  downscale: 1   # 如果显存紧张改成 2

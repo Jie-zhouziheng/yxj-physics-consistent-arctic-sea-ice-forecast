@@ -1,0 +1,28 @@
+[LOG] Writing stdout/stderr to: logs/vmrnn_K6_seed0_20260111-144704.log
+[INFO] Loaded ice mask: keeps 99755 / 136192
+[INFO] Device: cuda
+[INFO] lead_time=1 | out_steps=6 | seed=0 | epochs=5 | bs=1 | lr=0.001
+[INFO] VMRNN hid=32 z=8 downscale=2 beta_kl=0.0001
+[INFO] Train: 367 | Val: 55 | Test: 55
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/24_train_vmrnn.py:207: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(use_amp and device.type == "cuda"))
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/24_train_vmrnn.py:225: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(use_amp and device.type == "cuda")):
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/24_train_vmrnn.py:66: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(use_amp and device.type == "cuda")):
+[Epoch 01] Train loss=0.012214 | Val(step1) MAE=0.0519 RMSE=0.1247 | Val(mean@K) MAE=0.0845 RMSE=0.1937
+  [SAVE] best model -> experiments/VMRNN_K6_seed0.pt
+[Epoch 02] Train loss=0.003206 | Val(step1) MAE=0.0496 RMSE=0.1346 | Val(mean@K) MAE=0.0754 RMSE=0.1756
+[Epoch 03] Train loss=0.002203 | Val(step1) MAE=0.0432 RMSE=0.1245 | Val(mean@K) MAE=0.0650 RMSE=0.1599
+  [SAVE] best model -> experiments/VMRNN_K6_seed0.pt
+[Epoch 04] Train loss=0.001771 | Val(step1) MAE=0.0423 RMSE=0.1126 | Val(mean@K) MAE=0.0664 RMSE=0.1532
+  [SAVE] best model -> experiments/VMRNN_K6_seed0.pt
+[Epoch 05] Train loss=0.001532 | Val(step1) MAE=0.0408 RMSE=0.1096 | Val(mean@K) MAE=0.0637 RMSE=0.1432
+  [SAVE] best model -> experiments/VMRNN_K6_seed0.pt
+
+=== VMRNN (Test, masked) ===
+Mean@K MAE : 0.0633
+Mean@K RMSE: 0.1421
+Per-step RMSE: 0.1088, 0.1329, 0.1452, 0.1495, 0.1536, 0.1629
+Per-step MAE : 0.0404, 0.0547, 0.0659, 0.0712, 0.0728, 0.0747
+[OK] Per-step results appended to: scripts/results/models_test_vmrnn_K6.csv

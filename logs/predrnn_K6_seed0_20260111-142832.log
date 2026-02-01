@@ -1,0 +1,28 @@
+[LOG] Writing stdout/stderr to: logs/predrnn_K6_seed0_20260111-142832.log
+[INFO] Loaded ice mask: keeps 99755 / 136192
+[INFO] Device: cuda
+[INFO] lead_time=1 | out_steps=6 | seed=0 | epochs=5 | bs=1 | lr=0.001
+[INFO] Train: 367 | Val: 55 | Test: 55
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/22_train_predrnn.py:208: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(use_amp and device.type == "cuda"))
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/22_train_predrnn.py:226: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(use_amp and device.type == "cuda")):
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/22_train_predrnn.py:67: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(use_amp and device.type == "cuda")):
+[Epoch 01] Train masked-MSE=0.022260 | Val(step1) MAE=0.0661 RMSE=0.0963 | Val(mean@K) MAE=0.0567 RMSE=0.0963
+  [SAVE] best model -> experiments/PredRNN_K6_seed0.pt
+[Epoch 02] Train masked-MSE=0.008213 | Val(step1) MAE=0.0468 RMSE=0.0800 | Val(mean@K) MAE=0.0419 RMSE=0.0838
+  [SAVE] best model -> experiments/PredRNN_K6_seed0.pt
+[Epoch 03] Train masked-MSE=0.007277 | Val(step1) MAE=0.0387 RMSE=0.0723 | Val(mean@K) MAE=0.0382 RMSE=0.0820
+  [SAVE] best model -> experiments/PredRNN_K6_seed0.pt
+[Epoch 04] Train masked-MSE=0.006436 | Val(step1) MAE=0.0333 RMSE=0.0680 | Val(mean@K) MAE=0.0339 RMSE=0.0795
+  [SAVE] best model -> experiments/PredRNN_K6_seed0.pt
+[Epoch 05] Train masked-MSE=0.006306 | Val(step1) MAE=0.0318 RMSE=0.0662 | Val(mean@K) MAE=0.0324 RMSE=0.0785
+  [SAVE] best model -> experiments/PredRNN_K6_seed0.pt
+
+=== PredRNN (Test, masked) ===
+Mean@K MAE : 0.0317
+Mean@K RMSE: 0.0773
+Per-step RMSE: 0.0654, 0.0770, 0.0803, 0.0805, 0.0798, 0.0809
+Per-step MAE : 0.0315, 0.0307, 0.0327, 0.0307, 0.0319, 0.0329
+[OK] Per-step results appended to: scripts/results/models_test_predrnn_K6.csv

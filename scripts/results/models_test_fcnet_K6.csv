@@ -1,0 +1,13 @@
+model,split,input_window,lead_time,out_steps,mask,seed,mae,rmse
+FCNet,test,12,1,6,ice15,0,0.020757,0.062259
+FCNet,test,12,2,6,ice15,0,0.025574,0.077762
+FCNet,test,12,3,6,ice15,0,0.026895,0.081552
+FCNet,test,12,4,6,ice15,0,0.026063,0.079551
+FCNet,test,12,5,6,ice15,0,0.025232,0.078528
+FCNet,test,12,6,6,ice15,0,0.026050,0.080205
+FCNet,test,12,1,6,ice15,0,0.023298,0.060269
+FCNet,test,12,2,6,ice15,0,0.027905,0.074924
+FCNet,test,12,3,6,ice15,0,0.027033,0.078506
+FCNet,test,12,4,6,ice15,0,0.027290,0.078392
+FCNet,test,12,5,6,ice15,0,0.028808,0.079784
+FCNet,test,12,6,6,ice15,0,0.033489,0.081323

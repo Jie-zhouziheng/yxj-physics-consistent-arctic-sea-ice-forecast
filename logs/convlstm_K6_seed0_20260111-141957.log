@@ -1,0 +1,23 @@
+[LOG] Writing stdout/stderr to: logs/convlstm_K6_seed0_20260111-141957.log
+[INFO] Device: cuda
+[INFO] lead_time=1 | out_steps=6 | seed=0 | epochs=5 | bs=1 | lr=0.001
+[INFO] Train: 367 | Val: 55 | Test: 55
+[Epoch 01] Train masked-MSE=0.031667 | Val(step1) MAE=0.0561 RMSE=0.1075 | Val(mean@K) MAE=0.0471 RMSE=0.1045
+  [SAVE] best model -> experiments/ConvLSTM_lead1_K6_seed0.pt
+[Epoch 02] Train masked-MSE=0.008651 | Val(step1) MAE=0.0427 RMSE=0.0824 | Val(mean@K) MAE=0.0367 RMSE=0.0882
+  [SAVE] best model -> experiments/ConvLSTM_lead1_K6_seed0.pt
+[Epoch 03] Train masked-MSE=0.007113 | Val(step1) MAE=0.0325 RMSE=0.0787 | Val(mean@K) MAE=0.0330 RMSE=0.0855
+  [SAVE] best model -> experiments/ConvLSTM_lead1_K6_seed0.pt
+[Epoch 04] Train masked-MSE=0.006773 | Val(step1) MAE=0.0319 RMSE=0.0716 | Val(mean@K) MAE=0.0300 RMSE=0.0811
+  [SAVE] best model -> experiments/ConvLSTM_lead1_K6_seed0.pt
+[Epoch 05] Train masked-MSE=0.006682 | Val(step1) MAE=0.0325 RMSE=0.0705 | Val(mean@K) MAE=0.0337 RMSE=0.0801
+  [SAVE] best model -> experiments/ConvLSTM_lead1_K6_seed0.pt
+
+=== ConvLSTM (Test, masked) ===
+Step1 MAE  : 0.0320
+Step1 RMSE : 0.0697
+Mean@K MAE : 0.0337
+Mean@K RMSE: 0.0806
+Per-step RMSE: 0.0697, 0.0781, 0.0807, 0.0828, 0.0845, 0.0875
+Per-step MAE : 0.0320, 0.0314, 0.0322, 0.0336, 0.0350, 0.0381
+[OK] Fig2 json saved: scripts/results/fig2_json/fig2_convlstm_seed0.json

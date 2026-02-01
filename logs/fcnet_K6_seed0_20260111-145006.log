@@ -1,0 +1,20 @@
+[LOG] Writing stdout/stderr to: logs/fcnet_K6_seed0_20260111-145006.log
+[INFO] Loaded ice mask: keeps 99755 / 136192
+[INFO] Device: cuda
+[INFO] lead_time=1 | out_steps=6 | seed=0 | epochs=5 | bs=1 | lr=0.001
+[INFO] Train: 367 | Val: 55 | Test: 55
+[Epoch 01] Train masked-MSE=0.011084 | Val(step1) MAE=0.0258 RMSE=0.0694 | Val(mean@K) MAE=0.0297 RMSE=0.0819
+  [SAVE] best model -> experiments/FCNet_K6_seed0.pt
+[Epoch 02] Train masked-MSE=0.006514 | Val(step1) MAE=0.0273 RMSE=0.0766 | Val(mean@K) MAE=0.0314 RMSE=0.0810
+[Epoch 03] Train masked-MSE=0.006123 | Val(step1) MAE=0.0216 RMSE=0.0647 | Val(mean@K) MAE=0.0285 RMSE=0.0793
+  [SAVE] best model -> experiments/FCNet_K6_seed0.pt
+[Epoch 04] Train masked-MSE=0.005974 | Val(step1) MAE=0.0352 RMSE=0.0650 | Val(mean@K) MAE=0.0383 RMSE=0.0780
+[Epoch 05] Train masked-MSE=0.005896 | Val(step1) MAE=0.0211 RMSE=0.0634 | Val(mean@K) MAE=0.0256 RMSE=0.0774
+  [SAVE] best model -> experiments/FCNet_K6_seed0.pt
+
+=== FCNet (Test, masked) ===
+Mean@K MAE : 0.0251
+Mean@K RMSE: 0.0766
+Per-step RMSE: 0.0623, 0.0778, 0.0816, 0.0796, 0.0785, 0.0802
+Per-step MAE : 0.0208, 0.0256, 0.0269, 0.0261, 0.0252, 0.0261
+[OK] Per-step results appended to: scripts/results/models_test_fcnet_K6.csv

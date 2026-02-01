@@ -1,0 +1,27 @@
+[LOG] Writing stdout/stderr to: logs/simvp_K6_seed0_20260111-150531.log
+[INFO] Loaded ice mask: keeps 99755 / 136192
+[INFO] Device: cuda
+[INFO] lead_time=1 | out_steps=6 | seed=0 | epochs=5 | bs=1 | lr=0.001
+[INFO] Train: 367 | Val: 55 | Test: 55
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/23_train_simvp.py:204: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(use_amp and device.type == "cuda"))
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/23_train_simvp.py:222: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(use_amp and device.type == "cuda")):
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/23_train_simvp.py:67: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(use_amp and device.type == "cuda")):
+[Epoch 01] Train masked-MSE=0.036924 | Val(step1) MAE=0.1551 RMSE=0.3496 | Val(mean@K) MAE=0.1564 RMSE=0.2418
+  [SAVE] best model -> experiments/SimVP_K6_seed0.pt
+[Epoch 02] Train masked-MSE=0.024240 | Val(step1) MAE=0.1631 RMSE=0.3676 | Val(mean@K) MAE=0.1213 RMSE=0.2283
+[Epoch 03] Train masked-MSE=0.020642 | Val(step1) MAE=0.1494 RMSE=0.3386 | Val(mean@K) MAE=0.1221 RMSE=0.2258
+  [SAVE] best model -> experiments/SimVP_K6_seed0.pt
+[Epoch 04] Train masked-MSE=0.015699 | Val(step1) MAE=0.1077 RMSE=0.2522 | Val(mean@K) MAE=0.1095 RMSE=0.2194
+  [SAVE] best model -> experiments/SimVP_K6_seed0.pt
+[Epoch 05] Train masked-MSE=0.014241 | Val(step1) MAE=0.0865 RMSE=0.2066 | Val(mean@K) MAE=0.0905 RMSE=0.2101
+  [SAVE] best model -> experiments/SimVP_K6_seed0.pt
+
+=== SimVP (Test, masked) ===
+Mean@K MAE : 0.0909
+Mean@K RMSE: 0.2108
+Per-step RMSE: 0.2071, 0.2045, 0.1924, 0.2277, 0.2420, 0.1914
+Per-step MAE : 0.0870, 0.0890, 0.0777, 0.0998, 0.1116, 0.0801
+[OK] Per-step results appended to: scripts/results/models_test_simvp_K6.csv

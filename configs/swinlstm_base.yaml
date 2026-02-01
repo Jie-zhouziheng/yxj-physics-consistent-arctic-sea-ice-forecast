@@ -1,0 +1,11 @@
+inherits: base.yaml
+
+model:
+  name: swinlstm_base
+  out_steps: 6
+  embed_dim: 24
+  hidden_dim: 24
+  window_size: 8
+  num_heads: 3
+  kernel_size: 3
+  downscale: 2

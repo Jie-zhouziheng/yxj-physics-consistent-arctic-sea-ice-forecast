@@ -383,8 +383,9 @@ class ThermoSNN(nn.Module):
         # ---- Multi-scale fusion ----
         fused = self.fusion(feats, alpha=alpha)  # (T,B,C,H,W)
 
-        # ---- Head: use last time-step feature ----
-        fused_last = fused[-1]                   # (B,C,H,W)
-        out = self.head(fused_last)              # (B,out_steps,H,W)
+        # ---- Head: time pooling (better than using last step only) ----
+        # fused: (T,B,C,H,W)
+        fused_pool = fused.mean(dim=0)           # (B,C,H,W)
+        out = self.head(fused_pool)              # (B,out_steps,H,W)
         out = self.out_act(out)
         return out

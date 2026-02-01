@@ -1,0 +1,67 @@
+[LOG] Writing stdout/stderr to: logs/thermo_snn_lead1_K6_seed0_20260112-140248.log
+[INFO] Loaded ice mask: keeps 99755 / 136192
+[INFO] Device: cuda
+[INFO] lead_time=1 | out_steps=6 | seed=0 | epochs=40 | bs=2 | lr=0.0005
+[INFO] SAT lookup ready from: data/raw/era5_sat/era5_sat_anom_monthly_1979_2022_arctic.nc
+[INFO] Train: 367 | Val: 55 | Test: 55
+[Epoch 01] Train masked-MSE=0.141007 | Val(step1) MAE=0.1452 RMSE=0.1831 | Val(mean@K) MAE=0.1336 RMSE=0.1723
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 02] Train masked-MSE=0.045936 | Val(step1) MAE=0.0826 RMSE=0.1389 | Val(mean@K) MAE=0.0818 RMSE=0.1392
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 03] Train masked-MSE=0.033301 | Val(step1) MAE=0.0860 RMSE=0.1368 | Val(mean@K) MAE=0.0724 RMSE=0.1340
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 04] Train masked-MSE=0.030587 | Val(step1) MAE=0.0782 RMSE=0.1263 | Val(mean@K) MAE=0.0673 RMSE=0.1280
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 05] Train masked-MSE=0.028122 | Val(step1) MAE=0.0520 RMSE=0.1141 | Val(mean@K) MAE=0.0639 RMSE=0.1247
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 06] Train masked-MSE=0.025901 | Val(step1) MAE=0.0425 RMSE=0.1110 | Val(mean@K) MAE=0.0450 RMSE=0.1097
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 07] Train masked-MSE=0.024012 | Val(step1) MAE=0.0542 RMSE=0.1113 | Val(mean@K) MAE=0.0501 RMSE=0.1112
+[Epoch 08] Train masked-MSE=0.022145 | Val(step1) MAE=0.0543 RMSE=0.1030 | Val(mean@K) MAE=0.0539 RMSE=0.1045
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 09] Train masked-MSE=0.021609 | Val(step1) MAE=0.0367 RMSE=0.0998 | Val(mean@K) MAE=0.0409 RMSE=0.1047
+[Epoch 10] Train masked-MSE=0.020770 | Val(step1) MAE=0.0676 RMSE=0.1068 | Val(mean@K) MAE=0.0556 RMSE=0.1027
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 11] Train masked-MSE=0.019530 | Val(step1) MAE=0.0573 RMSE=0.0997 | Val(mean@K) MAE=0.0533 RMSE=0.1011
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 12] Train masked-MSE=0.019671 | Val(step1) MAE=0.0390 RMSE=0.0944 | Val(mean@K) MAE=0.0461 RMSE=0.1010
+[Epoch 13] Train masked-MSE=0.019265 | Val(step1) MAE=0.0374 RMSE=0.0933 | Val(mean@K) MAE=0.0437 RMSE=0.0990
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 14] Train masked-MSE=0.018777 | Val(step1) MAE=0.0318 RMSE=0.0905 | Val(mean@K) MAE=0.0376 RMSE=0.0945
+[Epoch 15] Train masked-MSE=0.018372 | Val(step1) MAE=0.0377 RMSE=0.0927 | Val(mean@K) MAE=0.0366 RMSE=0.0971
+[Epoch 16] Train masked-MSE=0.018174 | Val(step1) MAE=0.0622 RMSE=0.1001 | Val(mean@K) MAE=0.0419 RMSE=0.0975
+[Epoch 17] Train masked-MSE=0.017822 | Val(step1) MAE=0.0329 RMSE=0.0887 | Val(mean@K) MAE=0.0355 RMSE=0.0944
+[Epoch 18] Train masked-MSE=0.018202 | Val(step1) MAE=0.0386 RMSE=0.0895 | Val(mean@K) MAE=0.0346 RMSE=0.0944
+[Epoch 19] Train masked-MSE=0.017733 | Val(step1) MAE=0.0551 RMSE=0.1034 | Val(mean@K) MAE=0.0485 RMSE=0.1205
+[Epoch 20] Train masked-MSE=0.018944 | Val(step1) MAE=0.0340 RMSE=0.0911 | Val(mean@K) MAE=0.0358 RMSE=0.0990
+[Epoch 21] Train masked-MSE=0.017709 | Val(step1) MAE=0.0411 RMSE=0.0895 | Val(mean@K) MAE=0.0365 RMSE=0.0919
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 22] Train masked-MSE=0.017109 | Val(step1) MAE=0.0297 RMSE=0.0864 | Val(mean@K) MAE=0.0314 RMSE=0.0900
+[Epoch 23] Train masked-MSE=0.016586 | Val(step1) MAE=0.0313 RMSE=0.0854 | Val(mean@K) MAE=0.0321 RMSE=0.0900
+[Epoch 24] Train masked-MSE=0.017192 | Val(step1) MAE=0.0431 RMSE=0.0892 | Val(mean@K) MAE=0.0372 RMSE=0.0910
+[Epoch 25] Train masked-MSE=0.016578 | Val(step1) MAE=0.0357 RMSE=0.0861 | Val(mean@K) MAE=0.0323 RMSE=0.0926
+[Epoch 26] Train masked-MSE=0.016753 | Val(step1) MAE=0.0325 RMSE=0.0852 | Val(mean@K) MAE=0.0317 RMSE=0.0916
+[Epoch 27] Train masked-MSE=0.016764 | Val(step1) MAE=0.0305 RMSE=0.0861 | Val(mean@K) MAE=0.0322 RMSE=0.0905
+[Epoch 28] Train masked-MSE=0.016921 | Val(step1) MAE=0.0473 RMSE=0.0896 | Val(mean@K) MAE=0.0359 RMSE=0.0920
+[Epoch 29] Train masked-MSE=0.016953 | Val(step1) MAE=0.0363 RMSE=0.0880 | Val(mean@K) MAE=0.0347 RMSE=0.0943
+[Epoch 30] Train masked-MSE=0.016631 | Val(step1) MAE=0.0281 RMSE=0.0855 | Val(mean@K) MAE=0.0299 RMSE=0.0896
+[Epoch 31] Train masked-MSE=0.016223 | Val(step1) MAE=0.0291 RMSE=0.0842 | Val(mean@K) MAE=0.0304 RMSE=0.0896
+[Epoch 32] Train masked-MSE=0.016260 | Val(step1) MAE=0.0307 RMSE=0.0851 | Val(mean@K) MAE=0.0312 RMSE=0.0896
+[Epoch 33] Train masked-MSE=0.016456 | Val(step1) MAE=0.0410 RMSE=0.0865 | Val(mean@K) MAE=0.0362 RMSE=0.0912
+[Epoch 34] Train masked-MSE=0.016301 | Val(step1) MAE=0.0285 RMSE=0.0831 | Val(mean@K) MAE=0.0314 RMSE=0.0890
+  [SAVE] best model -> experiments/SNN_phase1_lead1_K6_seed0.pt
+[Epoch 35] Train masked-MSE=0.016380 | Val(step1) MAE=0.0308 RMSE=0.0841 | Val(mean@K) MAE=0.0317 RMSE=0.0892
+[Epoch 36] Train masked-MSE=0.016172 | Val(step1) MAE=0.0309 RMSE=0.0831 | Val(mean@K) MAE=0.0325 RMSE=0.0901
+[Epoch 37] Train masked-MSE=0.016130 | Val(step1) MAE=0.0282 RMSE=0.0840 | Val(mean@K) MAE=0.0301 RMSE=0.0880
+[Epoch 38] Train masked-MSE=0.016466 | Val(step1) MAE=0.0282 RMSE=0.0850 | Val(mean@K) MAE=0.0296 RMSE=0.0902
+[Epoch 39] Train masked-MSE=0.016213 | Val(step1) MAE=0.0282 RMSE=0.0844 | Val(mean@K) MAE=0.0296 RMSE=0.0883
+[Epoch 40] Train masked-MSE=0.015908 | Val(step1) MAE=0.0286 RMSE=0.0841 | Val(mean@K) MAE=0.0309 RMSE=0.0883
+
+=== SNN Phase-1 (Test, masked) ===
+Step1 MAE  : 0.0281
+Step1 RMSE : 0.0820
+Mean@K MAE : 0.0308
+Mean@K RMSE: 0.0881
+Per-step RMSE: 0.0820, 0.0836, 0.0880, 0.0903, 0.0912, 0.0936
+Per-step MAE : 0.0281, 0.0285, 0.0302, 0.0317, 0.0326, 0.0334
+[OK] Results appended to: scripts/results/models_test_lead1_K6.csv

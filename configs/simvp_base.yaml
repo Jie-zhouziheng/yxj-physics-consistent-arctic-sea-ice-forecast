@@ -1,0 +1,9 @@
+# configs/simvp_base.yaml
+inherits: base.yaml
+
+model:
+  name: simvp_base
+  out_steps: 6
+  hidden_channels: 32
+  mid_depth: 4
+  kt: 3

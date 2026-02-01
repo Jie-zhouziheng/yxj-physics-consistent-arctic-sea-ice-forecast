@@ -1,0 +1,34 @@
+[LOG] Writing stdout/stderr to: logs/simvp_K6_seed0_20260111-152302.log
+[INFO] Loaded ice mask: keeps 99755 / 136192
+[INFO] Device: cuda
+[INFO] lead_time=1 | out_steps=6 | seed=0 | epochs=10 | bs=1 | lr=0.001
+[INFO] Train: 367 | Val: 55 | Test: 55
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/23_train_simvp.py:204: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(use_amp and device.type == "cuda"))
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/23_train_simvp.py:222: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(use_amp and device.type == "cuda")):
+/home/an/projects/physics-consistent-arctic-sea-ice-forecast/scripts/23_train_simvp.py:67: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(use_amp and device.type == "cuda")):
+[Epoch 01] Train masked-MSE=0.036924 | Val(step1) MAE=0.1551 RMSE=0.3496 | Val(mean@K) MAE=0.1564 RMSE=0.2418
+  [SAVE] best model -> experiments/SimVP_K6_seed0.pt
+[Epoch 02] Train masked-MSE=0.024240 | Val(step1) MAE=0.1631 RMSE=0.3676 | Val(mean@K) MAE=0.1213 RMSE=0.2283
+[Epoch 03] Train masked-MSE=0.020642 | Val(step1) MAE=0.1494 RMSE=0.3386 | Val(mean@K) MAE=0.1221 RMSE=0.2258
+  [SAVE] best model -> experiments/SimVP_K6_seed0.pt
+[Epoch 04] Train masked-MSE=0.015699 | Val(step1) MAE=0.1077 RMSE=0.2522 | Val(mean@K) MAE=0.1095 RMSE=0.2194
+  [SAVE] best model -> experiments/SimVP_K6_seed0.pt
+[Epoch 05] Train masked-MSE=0.014241 | Val(step1) MAE=0.0865 RMSE=0.2066 | Val(mean@K) MAE=0.0905 RMSE=0.2101
+  [SAVE] best model -> experiments/SimVP_K6_seed0.pt
+[Epoch 06] Train masked-MSE=0.012404 | Val(step1) MAE=0.0822 RMSE=0.2018 | Val(mean@K) MAE=0.0889 RMSE=0.2117
+  [SAVE] best model -> experiments/SimVP_K6_seed0.pt
+[Epoch 07] Train masked-MSE=0.012115 | Val(step1) MAE=0.0852 RMSE=0.2222 | Val(mean@K) MAE=0.0955 RMSE=0.2214
+[Epoch 08] Train masked-MSE=0.011539 | Val(step1) MAE=0.0590 RMSE=0.1570 | Val(mean@K) MAE=0.0753 RMSE=0.1876
+  [SAVE] best model -> experiments/SimVP_K6_seed0.pt
+[Epoch 09] Train masked-MSE=0.011681 | Val(step1) MAE=0.0949 RMSE=0.2215 | Val(mean@K) MAE=0.0982 RMSE=0.2261
+[Epoch 10] Train masked-MSE=0.010593 | Val(step1) MAE=0.1014 RMSE=0.2543 | Val(mean@K) MAE=0.1059 RMSE=0.2503
+
+=== SimVP (Test, masked) ===
+Mean@K MAE : 0.0752
+Mean@K RMSE: 0.1877
+Per-step RMSE: 0.1574, 0.1697, 0.1879, 0.2061, 0.2011, 0.2041
+Per-step MAE : 0.0592, 0.0682, 0.0751, 0.0831, 0.0806, 0.0851
+[OK] Per-step results appended to: scripts/results/models_test_simvp_K6.csv

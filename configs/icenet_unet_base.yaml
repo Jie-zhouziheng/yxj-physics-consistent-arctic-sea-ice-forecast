@@ -1,0 +1,6 @@
+inherits: base.yaml
+
+model:
+  name: icenet_unet_base
+  base_channels: 32
+  out_steps: 6

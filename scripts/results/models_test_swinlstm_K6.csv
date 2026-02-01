@@ -1,0 +1,7 @@
+model,split,input_window,lead_time,out_steps,mask,seed,mae,rmse
+SwinLSTM,test,12,1,6,ice15,0,0.038094,0.088250
+SwinLSTM,test,12,2,6,ice15,0,0.041527,0.097777
+SwinLSTM,test,12,3,6,ice15,0,0.039497,0.100117
+SwinLSTM,test,12,4,6,ice15,0,0.044111,0.101998
+SwinLSTM,test,12,5,6,ice15,0,0.041248,0.100320
+SwinLSTM,test,12,6,6,ice15,0,0.047435,0.103314

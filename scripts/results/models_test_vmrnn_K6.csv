@@ -1,0 +1,7 @@
+model,split,input_window,lead_time,out_steps,mask,seed,mae,rmse
+VMRNN,test,12,1,6,ice15,0,0.040391,0.108797
+VMRNN,test,12,2,6,ice15,0,0.054716,0.132854
+VMRNN,test,12,3,6,ice15,0,0.065917,0.145195
+VMRNN,test,12,4,6,ice15,0,0.071163,0.149537
+VMRNN,test,12,5,6,ice15,0,0.072808,0.153588
+VMRNN,test,12,6,6,ice15,0,0.074692,0.162877

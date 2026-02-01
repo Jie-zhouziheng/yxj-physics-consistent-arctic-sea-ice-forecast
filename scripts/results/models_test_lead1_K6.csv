@@ -1,0 +1,9 @@
+model,split,input_window,lead_time,out_steps,mask,seed,mae,rmse
+SNN_phase1_thermo_sat_seqK,test,12,1,6,ice15,0,0.028983,0.076691
+ConvLSTM_seq2seq,test,12,1,6,ice15,0,0.035272,0.073235
+IceNetUNet_baseline,test,12,1,6,ice15,0,0.039879,0.067832
+ConvLSTM_seq2seq,test,12,1,6,ice15,0,0.035272,0.073235
+IceNetUNet_baseline,test,12,1,6,ice15,0,0.039879,0.067832
+IceNetUNet_baseline,test,12,1,6,ice15,0,0.039879,0.067832
+ConvLSTM_seq2seq,test,12,1,6,ice15,0,0.032016,0.069681
+SNN_phase1_thermo_sat_seqK,test,12,1,6,ice15,0,0.028143,0.082033

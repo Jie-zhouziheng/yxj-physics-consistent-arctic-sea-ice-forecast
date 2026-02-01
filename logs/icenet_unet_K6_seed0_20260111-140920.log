@@ -1,0 +1,22 @@
+[LOG] Writing stdout/stderr to: logs/icenet_unet_K6_seed0_20260111-140920.log
+[INFO] Device: cuda
+[INFO] lead_time=1 | out_steps=6 | seed=0 | epochs=5 | bs=2 | lr=0.001
+[INFO] Train: 367 | Val: 55 | Test: 55
+[Epoch 01] Train masked-MSE=0.051905 | Val(step1) MAE=0.1014 RMSE=0.1147 | Val(mean@K) MAE=0.0944 RMSE=0.1138
+  [SAVE] best model -> experiments/IceNetUNet_lead1_K6_seed0.pt
+[Epoch 02] Train masked-MSE=0.009729 | Val(step1) MAE=0.0682 RMSE=0.0884 | Val(mean@K) MAE=0.0821 RMSE=0.1037
+  [SAVE] best model -> experiments/IceNetUNet_lead1_K6_seed0.pt
+[Epoch 03] Train masked-MSE=0.007151 | Val(step1) MAE=0.0501 RMSE=0.0722 | Val(mean@K) MAE=0.0507 RMSE=0.0820
+  [SAVE] best model -> experiments/IceNetUNet_lead1_K6_seed0.pt
+[Epoch 04] Train masked-MSE=0.006425 | Val(step1) MAE=0.0400 RMSE=0.0683 | Val(mean@K) MAE=0.0428 RMSE=0.0793
+  [SAVE] best model -> experiments/IceNetUNet_lead1_K6_seed0.pt
+[Epoch 05] Train masked-MSE=0.006052 | Val(step1) MAE=0.0286 RMSE=0.0705 | Val(mean@K) MAE=0.0298 RMSE=0.0796
+
+=== IceNet-UNet (Test, masked) ===
+Step1 MAE  : 0.0399
+Step1 RMSE : 0.0678
+Mean@K MAE : 0.0424
+Mean@K RMSE: 0.0786
+Per-step RMSE: 0.0678, 0.0792, 0.0819, 0.0805, 0.0815, 0.0806
+Per-step MAE : 0.0399, 0.0458, 0.0439, 0.0412, 0.0429, 0.0406
+[OK] Fig2 json saved: scripts/results/fig2_json/fig2_icenet_seed0.json

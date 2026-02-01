@@ -1,0 +1,7 @@
+model,split,input_window,lead_time,out_steps,mask,seed,mae,rmse
+PredRNN,test,12,1,6,ice15,0,0.031548,0.065449
+PredRNN,test,12,2,6,ice15,0,0.030664,0.077026
+PredRNN,test,12,3,6,ice15,0,0.032744,0.080282
+PredRNN,test,12,4,6,ice15,0,0.030666,0.080455
+PredRNN,test,12,5,6,ice15,0,0.031933,0.079838
+PredRNN,test,12,6,6,ice15,0,0.032889,0.080881

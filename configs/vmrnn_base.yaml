@@ -1,0 +1,13 @@
+# configs/vmrnn_base.yaml
+inherits: base.yaml
+
+train:
+  beta_kl: 1.0e-4   # KL 很小更稳；想更“变分”可以试 1e-3
+
+model:
+  name: vmrnn_base
+  out_steps: 6
+  hidden_channels: 32
+  z_channels: 8
+  downscale: 2
+  gru_kernel: 3

@@ -1,0 +1,24 @@
+[LOG] Writing stdout/stderr to: logs/swinlstm_lead1_K6_seed0_20260111-141156.log
+[INFO] Loaded ice mask: keeps 99755 / 136192
+[INFO] Device: cuda
+[INFO] lead_time=1 | out_steps=6 | seed=0 | epochs=5 | bs=1 | lr=0.001
+[INFO] Train: 367 | Val: 55 | Test: 55
+[Epoch 01] Train masked-MSE=0.031223 | Val(step1) MAE=0.0770 RMSE=0.1217 | Val(mean@K) MAE=0.0763 RMSE=0.1249
+  [SAVE] best model -> experiments/SwinLSTM_lead1_K6_seed0.pt
+[Epoch 02] Train masked-MSE=0.012976 | Val(step1) MAE=0.0552 RMSE=0.1038 | Val(mean@K) MAE=0.0560 RMSE=0.1101
+  [SAVE] best model -> experiments/SwinLSTM_lead1_K6_seed0.pt
+[Epoch 03] Train masked-MSE=0.010917 | Val(step1) MAE=0.0439 RMSE=0.0945 | Val(mean@K) MAE=0.0477 RMSE=0.1047
+  [SAVE] best model -> experiments/SwinLSTM_lead1_K6_seed0.pt
+[Epoch 04] Train masked-MSE=0.010238 | Val(step1) MAE=0.0394 RMSE=0.0909 | Val(mean@K) MAE=0.0430 RMSE=0.1020
+  [SAVE] best model -> experiments/SwinLSTM_lead1_K6_seed0.pt
+[Epoch 05] Train masked-MSE=0.009546 | Val(step1) MAE=0.0381 RMSE=0.0882 | Val(mean@K) MAE=0.0426 RMSE=0.0998
+  [SAVE] best model -> experiments/SwinLSTM_lead1_K6_seed0.pt
+
+=== SwinLSTM (Test, masked) ===
+Step1 MAE  : 0.0381
+Step1 RMSE : 0.0882
+Mean@K MAE : 0.0420
+Mean@K RMSE: 0.0986
+Per-step RMSE: 0.0882, 0.0978, 0.1001, 0.1020, 0.1003, 0.1033
+Per-step MAE : 0.0381, 0.0415, 0.0395, 0.0441, 0.0412, 0.0474
+[OK] Per-step results appended to: scripts/results/models_test_swinlstm_K6.csv

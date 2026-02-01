@@ -9,7 +9,7 @@ import torch
 from torch.utils.data import DataLoader
 
 from src.datasets import build_index, split_index_by_year, SICWindowDataset
-from src.models.season_aware_phase2 import SeasonAwarePhase2
+from src.models.古旧的尘埃.season_aware_phase2 import SeasonAwarePhase2
 from src.losses.physics import tv_loss_2d, temporal_smooth_loss_single_step
 from scripts.eval_utils import evaluate_monthly_append
 from src.utils.repro import seed_everything, make_torch_generator

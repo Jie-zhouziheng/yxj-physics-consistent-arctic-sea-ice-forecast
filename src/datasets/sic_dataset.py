@@ -30,16 +30,17 @@ class SICWindowDataset:
 
     Each sample:
       input:  X  shape (input_window, H, W)
-      target: Y  shape (out_steps, H, W)   <-- NEW (was (H,W))
+      target: Y  shape (out_steps, H, W)
 
     Definition (for sample ending at index t):
       X uses months [t-input_window+1, ..., t]
       Y uses months [t + lead_time, ..., t + lead_time + out_steps - 1]
 
-    Example:
-      input_window=6, lead_time=1, out_steps=3
-      X: 6 months ending at t
-      Y: next 3 months: (t+1), (t+2), (t+3)
+    Meta:
+      t_in:      str "YYYYMM" (last input month)
+      t_in_seq:  list[str], length T (all input months)
+      t_out:     str "YYYYMM" (first target month, backward compatible)
+      t_out_seq: list[str], length K (all target months)
     """
 
     def __init__(
@@ -73,8 +74,15 @@ class SICWindowDataset:
         # need t-input_window+1 >= 0
         # and t + lead_time + (out_steps-1) < len(index)
         self._t_min = self.input_window - 1
+        # last valid t satisfies: t + lead_time + out_steps - 1 <= len(index) - 1
         self._t_max = len(self.index) - self.lead_time - self.out_steps
         self._len = max(0, self._t_max - self._t_min + 1)
+
+        if self._len <= 0:
+            raise RuntimeError(
+                f"No valid samples: len(index)={len(index)} input_window={input_window} "
+                f"lead_time={lead_time} out_steps={out_steps}"
+            )
 
     def __len__(self) -> int:
         return self._len
@@ -95,8 +103,10 @@ class SICWindowDataset:
 
         # input window months
         xs = []
+        tins = []
         for k in range(t - self.input_window + 1, t + 1):
             xs.append(self._get_arr(self.index[k]))
+            tins.append(self.index[k].ym)
         x = np.stack(xs, axis=0)  # (T,H,W)
 
         # target sequence months (K steps)
@@ -110,8 +120,9 @@ class SICWindowDataset:
         y = np.stack(ys, axis=0)  # (K,H,W)
 
         meta: Dict[str, object] = {
-            "t_in": self.index[t].ym,
-            "t_out": touts[0],        # keep backward compatibility (first step)
-            "t_out_seq": touts,       # NEW: list[str], length K
+            "t_in": self.index[t].ym,   # last input month
+            "t_in_seq": tins,           # NEW: list[str], length T
+            "t_out": touts[0],          # backward compatible (first step)
+            "t_out_seq": touts,         # list[str], length K
         }
         return x, y, meta

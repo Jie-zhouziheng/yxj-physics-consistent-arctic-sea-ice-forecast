@@ -12,7 +12,7 @@ from scripts.eval_utils import evaluate_monthly_append
 from src.utils.repro import seed_everything, make_torch_generator
 
 from src.datasets.sic_sat_scalar_dataset import build_sat_scalar_lookup, SICSatScalarDataset
-from src.models.season_aware_phase3_sat_gate import Phase3SatGate
+from src.models.古旧的尘埃.season_aware_phase3_sat_gate import Phase3SatGate
 
 
 def masked_mae_rmse(y_true: np.ndarray, y_pred: np.ndarray, wmask: np.ndarray, denom: float):
